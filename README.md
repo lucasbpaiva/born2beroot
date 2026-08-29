@@ -24,7 +24,8 @@ To evaluate or run this project:
 1. Verify current signature matches the content of signature.txt
 
 ```bash
-diff -s signature.txt <(shasum path_to_vm/machine.vdi)
+cd /home/lbalderr/sgoinfre/lbalderr_vm/Born2beRoot
+diff -s /path_to_this_repo/signature.txt <(sha1sum Born2beRoot.vdi)
 ```
 
 2. Open Oracle VM VirtualBox.
@@ -45,4 +46,5 @@ ssh -p 9999 username@localhost
 *   [Bash Scripting Tutorial](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
 
 ## AI Usage
-Large Language Models (mainly Google Gemini) were used as an interactive tutor and debugging assistant throughout this project. AI was specifically utilized to understand the nuances of the `wall` command and terminal permissions (`mesg y`, `tty` group logic), to debug SSH session behaviors (`who` command, pseudo-terminals), and to learn the underlying differences between `cron` and `crontab`. No configurations or scripts were blindly copied; AI was used strictly to explain concepts and troubleshoot environmental specificities.
+Large Language Models (Google Gemini) were used as an interactive tutor and debugging assistant throughout this project. 
+No commands or scripts were blindly copied, AI was used strictly to explain concepts and troubleshoot environmental specificities.
